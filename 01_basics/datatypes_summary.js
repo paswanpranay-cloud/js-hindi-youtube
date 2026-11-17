@@ -51,3 +51,30 @@ console.log(typeof scoreValue); // number
 console.log(typeof myFunction); // function datatype aayega output(object function)
 console.log(typeof heros); //object dega kyuki array ke ander to object hoga
 console.log(typeof anotherId); // symbol
+
+
+
+////****************************************************///
+
+// Stack(Primitive)-> A copy is made and 
+//Heap(Non Primitive)-> Reference from original memeory
+
+let myYoutubename = "PranayPaswan.com" // ye apka stack mai jayega variabel stack mai jayega 
+
+let anothername = myYoutubename
+
+anothername = "Prashant Paswan"
+console.log(myYoutubename);  // PranayPaswan.com->kuki stack mai copy bani hai and copy mai change hota hai
+console.log(anothername);    //Prashant Paswan 
+
+let userOne = {
+    email :" user1email.com",
+    upi :"user@ybl"
+} // Heap  mai jayega 
+
+let userTwo = userOne
+
+userTwo.email = "user2email.com"
+
+console.log(userOne.email); //user2emai.com -> object (non primitive) -> original refrence
+console.log(userTwo.email); //user2emai.com -> object (non primitive) -> original refrence
